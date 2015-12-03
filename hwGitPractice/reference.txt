@@ -1,6 +1,0 @@
-init
-clone
-add
-commit
-pull
-push
