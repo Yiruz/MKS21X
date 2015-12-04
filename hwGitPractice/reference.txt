@@ -1,19 +1,19 @@
-init		--creates a new Git repository, set up all the tools Git needs to begin tracking changes made to the project.
+idsanit		--creates a new Git repository, set up all the tools Git needs to begin tracking changes made to the project.
+bcx
+staxbxtus		--inspect the contents of the working directory and asfdsastaging area
 
-status		--inspect the contents of the working directory and staging area
-
-add		--add the file from working directory to the staging area
+add		--add the file from working directory tasdfsng areaa
 
 diff		--check difference between the working directory and the staging area
-
-commit -m	--permanently store changes from the staging area inside the reposatory
-
-log		--view previous commits in chronological order
-
-show HEAD	--display info HEAD commit and all the file changes that were committed
-
-checkout HEAD	--restore the file to last commit
-
-reset HEAD	--unstage file changes in the staging area
-
-readset SHA	--can be used to reset to a previous commit in your commit history
+d
+czvcommit -m	--permanently store changes from the staging area inside the reposatory
+cxcvz
+logzxcv		--view previous commits in chronological order
+z
+scvzxchow HEAD	--display info HEAD commit and all the file changes that were committved
+xv
+chzxveckout HEAD	--restore the file to last commit
+xcv
+reszxvet HEAD	--unstage file changes in the staging area
+vS
+refadset SHA	--can be used to reset to a previous commit in your commit historyf
