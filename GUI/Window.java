@@ -1,7 +1,7 @@
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
-public class Window extends JFrame {
+public class Window extends JFrame implements ActionListener{
     private Container pane;
     private JTextField t;
     private JLabel l;
@@ -31,12 +31,14 @@ public class Window extends JFrame {
 
     public void actionPerformed(ActionEvent e){
 	String event = e.getActionCommand();
+	double s = Double.parseDouble(t.getText());
 	if(event.equals("From Celcius")){
-	    int s = CtoF(t.getText());
-	    l.setText(s);	    
+	    s = CtoF(s);
+	    l.setText(s+"");	    
 	}
 	if(event.equals("From Farenheit")){
-	    
+	    s = FtoC(s);
+	    l.setText(s+"");
 	}
     }
 
