@@ -21,8 +21,16 @@ public class Window extends JFrame {
 	pane.add(t);
     }
 
+    public static double CtoF(double t){
+	return t * 9/5 +32;
+    }
+    public static double FtoC(double t){
+	return (t - 32) * 5/9;
+    }
+
     public static void main(String[] args) {
         Window g = new Window();
         g.setVisible(true);
+
     }
 }
