@@ -23,7 +23,7 @@ public class Window extends JFrame implements ActionListener{
 	pane.add(b2);
 	b2.addActionListener(this);
 	b2.setActionCommand("From Farenheit");
-	t = new JTextField(10);
+	t = new JTextField(5);
 	pane.add(t);
 	l = new JLabel("");
 	pane.add(l);
@@ -39,6 +39,7 @@ public class Window extends JFrame implements ActionListener{
 	if(event.equals("From Farenheit")){
 	    s = FtoC(s);
 	    l.setText(s+"");
+	    
 	}
     }
 
