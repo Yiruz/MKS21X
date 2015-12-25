@@ -3,7 +3,7 @@ import java.awt.*;
 import java.awt.event.*;
 public class Window extends JFrame implements ActionListener{
     private Container pane;
-    private JTextField t;
+    private static JTextField t;
     private JLabel l;
 
     public Window() {
@@ -32,23 +32,44 @@ public class Window extends JFrame implements ActionListener{
     public void actionPerformed(ActionEvent e){
 	String event = e.getActionCommand();
 	double s = Double.parseDouble(t.getText());
-	if(event.equals("From Celcius")){
-	    s = CtoF(s);
-	    l.setText(s+"");	    
-	}
-	if(event.equals("From Farenheit")){
-	    s = FtoC(s);
-	    l.setText(s+"");
+	/*if(number()==false){
+	    l.setText("Please input numbers");
 	    
+	}*/
+	try{
+	    Integer.parseInt(t.getText());
+	    if(event.equals("From Celcius")){
+		s = CtoF(s);
+		l.setText(s+"F");	    
+	    }
+	    if(event.equals("From Farenheit")){
+		s = FtoC(s);
+		l.setText(s+"C");
+	    }
+	}catch(NumberFormatException n){
+	    l.setText("Please input numbers");
 	}
+	
     }
 
-    public static double CtoF(double t){
-	return t * 9/5 +32;
+    public static double CtoF(double c){
+	return c * 9/5 +32;
     }
-    public static double FtoC(double t){
-	return (t - 32) * 5/9;
+    public static double FtoC(double f){
+	return (f - 32) * 5/9;
     }
 
-
+    //help from kevin
+    public static boolean number(){
+	String input = t.getText();
+	if(input.length()==0){
+	    return false;
+	}
+	for(int i=0; i<input.length();i++){
+	    if(!Character.isDigit(input.charAt(i))){
+		return false;
+	    }
+	}
+	return true;
+    }
 }
