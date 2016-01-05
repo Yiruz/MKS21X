@@ -14,7 +14,7 @@ public class Sorts{
 	for(int i=0;i<data.length;i++){
 	    int first = i;
 	    for(int j=i;j<data.length;j++){
-		if(data[i]>data[j]){
+		if(data[first]>data[j]){
 		    first=j;
 		}
 	    }
@@ -31,11 +31,18 @@ public class Sorts{
 	System.out.print(data[data.length-1]+"]\n");
     }
     public static void main(String[]args){
-	int[]data={2,1,8,0,22,7,-4};
-	int[]copy={2,1,8,0,22,7,-4};
+	int[]data=new int[10];
+	for(int i=0;i<data.length;i++){
+	    data[i]=(int)(Math.random()*20-5);
+	}
+	int[]copy=new int[10];
+	for(int i=0;i<data.length;i++){
+	    copy[i]=data[i];
+	}
+	print(data);
 	insertion(data);
 	print(data);
 	selection(copy);
-	print(data);
+	print(copy);
     }
 }
