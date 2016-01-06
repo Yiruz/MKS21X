@@ -28,6 +28,7 @@ public class Sorts{
 	System.out.println("End");
     }
     public static void bubbleSort(int[]data){
+	boolean swap = false;
 	System.out.println("Start");
 	int end = data.length;
 	for(int i=0;i<end;i++){
@@ -36,27 +37,14 @@ public class Sorts{
 		    int temp = data[j];
 		    data[j]=data[j+1];
 		    data[j+1]=temp;
-		    
+		    swap = true;
 		}
 	    }
-	    System.out.println(Arrays.toString(data));
+	    if(!swap){
+		System.out.println(Arrays.toString(data));
+	    }
 	    end--;
 	}
     }
   
-    public static void main(String[]args){
-	int[]data=new int[5];
-	for(int i=0;i<data.length;i++){
-	    data[i]=(int)(Math.random()*100-50);
-	}
-	int[]copy=new int[5];
-	for(int i=0;i<data.length;i++){
-	    copy[i]=data[i];
-	}
-	System.out.println(Arrays.toString(data));
-	bubbleSort(data);
-	System.out.println(Arrays.toString(data));
-	selectionSort(copy);
-	System.out.println(Arrays.toString(data));
-    }
 }
