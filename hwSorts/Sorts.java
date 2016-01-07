@@ -46,5 +46,18 @@ public class Sorts{
 	    end--;
 	}
     }
-  
+
+    public static void fillRandom(int[]data){
+	Random rand = new Random();
+	for(int i=0;i<data.length;i++){
+	    data[i]=rand.nextInt(1000)-500;
+	}
+    }
+    public static void swap(int[]data,int a,int b){
+	for(int i=0;i<data.length/2;i++){
+	    int temp=data[i];
+	    data[i]=data[data.length-i];
+	    data[data.length-i]=temp;
+	}
+    }
 }
